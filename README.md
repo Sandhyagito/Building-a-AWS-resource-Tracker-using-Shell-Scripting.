@@ -37,6 +37,13 @@ Ensure your AWS CLI is configured with the necessary permissions:
 
 aws configure
 
+$ aws configure
+AWS Access Key ID [None]: YOUR_ACCESS_KEY_ID
+AWS Secret Access Key [None]: YOUR_SECRET_ACCESS_KEY
+Default region name [None]: The AWS region you want to use as the default for your AWS CLI commands (e.g., us-east-1, us-west-2).
+Default output format [None]: The format in which you want the AWS CLI to return responses. Options include json, yaml, yaml-stream, text, and table.
+
+
 Install jq:
 
 If you don't have jq installed, you can install it using:
@@ -74,3 +81,4 @@ Save and exit the crontab editor.
 
 ![image](https://github.com/user-attachments/assets/0874dc45-c201-4f71-9129-e7b08cf999e0)
 
+The crontab will run the script every day at 8 PM, and the output will be appended to the resourcetracker file.
