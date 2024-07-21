@@ -6,8 +6,11 @@ The AWS Resource Tracker is a bash script designed to report on various AWS reso
 
 # Features
 List all S3 buckets
+
 List all EC2 instances with their instance IDs
+
 List all Lambda functions
+
 List all IAM users
 
 # Prerequisites
