@@ -18,37 +18,9 @@ AWS CLI is installed and configured on your machine.
 Sufficient AWS permissions to list resources.
 
 # Script Content
-#!/bin/bash
+![image](https://github.com/user-attachments/assets/778feaa0-6119-47cd-8d65-ba5f8132a58b)
 
-#######################
-# Author: Sandhya
-# Date: 21/07/2024
-# Version: v1
-# This script will report the AWS resource usage
-########################
-
-#set -x # debug mode
-
- //AWS S3
- //AWS EC2
- //AWS Lambda
- //AWS IAM Users
-
-# list s3 buckets
-echo "Print list of s3 buckets"
-aws s3 ls >> resourcetracker
-
-# list EC2 Instances
-echo "Print list of ec2 instances"
-aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId' >> resourcetracker
-
-# list Lambda functions
-echo "Print list of lambda functions"
-aws lambda list-functions >> resourcetracker
-
-# list IAM users
-echo "Print list of IAM users"
-aws iam list-users >> resourcetracker
+![image](https://github.com/user-attachments/assets/6b23d616-5493-4a0d-b9de-a7dd553ceb92)
 
 # Usage
 Create the Script on Your EC2 Instance:
@@ -70,6 +42,7 @@ Install jq:
 If you don't have jq installed, you can install it using:
 
 sudo yum install jq  # For Amazon Linux
+
 sudo apt-get install jq  # For Ubuntu
 
 # Run the Script:
@@ -77,6 +50,7 @@ sudo apt-get install jq  # For Ubuntu
 Make the script executable and run it:
 
 chmod +x aws_resource_tracker.sh # To add execute permissions for the file
+
 ./aws_resource_tracker.sh # command to run the script
 
 # Check the Output:
@@ -89,9 +63,11 @@ To automate the execution of this script, you can set up a cron job to run it at
 Open the crontab configuration:
 
 crontab -e
+
 Add the following line to the crontab file to run the script every day at 8:00 PM:
 
 0 20 * * * /path/to/aws_resource_tracker.sh
+
 Replace /path/to/aws_resource_tracker.sh with the actual path to your script.
 
 Save and exit the crontab editor.
