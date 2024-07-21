@@ -29,10 +29,10 @@ Sufficient AWS permissions to list resources.
 
 #set -x # debug mode
 
-# AWS S3
-# AWS EC2
-# AWS Lambda
-# AWS IAM Users
+ //AWS S3
+ //AWS EC2
+ //AWS Lambda
+ //AWS IAM Users
 
 # list s3 buckets
 echo "Print list of s3 buckets"
