@@ -42,8 +42,11 @@ aws configure
 
 $ aws configure
 AWS Access Key ID [None]: YOUR_ACCESS_KEY_ID
+
 AWS Secret Access Key [None]: YOUR_SECRET_ACCESS_KEY
+
 Default region name [None]: The AWS region you want to use as the default for your AWS CLI commands (e.g., us-east-1, us-west-2).
+
 Default output format [None]: The format in which you want the AWS CLI to return responses. Options include json, yaml, yaml-stream, text, and table.
 
 
@@ -68,6 +71,7 @@ chmod +x aws_resource_tracker.sh # To add execute permissions for the file
 The output of the script will be saved in the resourcetracker file in the current directory.
 
 # Automating with Cron Job
+
 To automate the execution of this script, you can set up a cron job to run it at a specified time.
 
 Open the crontab configuration:
